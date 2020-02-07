@@ -36,6 +36,39 @@ document.head.appendChild(fhs);document.write("<span id='o_"+fhs_id+"'></span>")
 </div>
 <div id="box-ip" style="width:120px;float:left;background:#661111;border-radius:6px;padding:5px;margin-left:5px;color:#FFFFFF;font:13px Arial;display:inline;">
 <a>IP :</a><script language="JavaScript" src="https://freehostedscripts.net/ip.php"></script></div>
+<div id="mydate" style="background:#115599;border-radius:6px;padding:5px;color:#FFF;font:20px Arial;display:inline;">
+<script><!--
+var date = new Date();
+var d  = date.getDate();
+var day = (d < 10) ? '0' + d : d;
+var m = date.getMonth() + 1;
+var month = (m < 10) ? '0' + m : m;
+var yy = date.getYear();
+var year = (yy < 1000) ? yy + 1900 : yy;
+document.write(day + "/" + month + "/" + year);
+ //--></script>
+</div>
+<div id="mytime" style="background:#FBBB22;border-radius: 6px;padding:5px;margin-left:10px;color:#000000;font: 20px Arial;display:inline;">
+<script>
+function renderTime() {
+var currentTime = new Date();
+var diem = "am";
+var h = currentTime.getHours();
+var m = currentTime.getMinutes();
+var s = currentTime.getSeconds();
+setTimeout('renderTime()',1000);
+if (h == 0) {h = 12;
+} else if (h > 12) {h = h - 12;
+diem="pm";}
+if (h < 10) {h = "0" + h;	}
+if (m < 10) {m = "0" + m;}
+if (s < 10) {s = "0" + s;	}
+var myClock = document.getElementById('clockDisplay');
+myClock.textContent = h + ":" + m + ":" + s + " " + diem;
+myClock.innerText = h + ":" + m + ":" + s + " " + diem;}
+renderTime();
+</script>
+</div>
 <h5>CLOUD STORAGE</h5>            
             <A HREF="http://mozy.ie" target="_blank">MOZY.IE</A><br/>
             <A HREF="https://mega.nz" target="_blank">MEGA.NZ</A><br/>
