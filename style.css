@@ -3,7 +3,7 @@ html,body {margin:0;padding:0}
 body {font:13px Arial;color:#FFF;background:#333333;background-image:url(https://images2.imgbox.com/98/f6/gmeGGsSv_o.jpg);
 background-attachment:fixed;background-position:center top;background-repeat:no-repeat;}
 /* HEADER STYLE ----------------------------------------------- */
-#header{position:relative;height:70px;background:rgba(0,0,0, 0.75);width:1500px;display:block;overflow:auto}
+#header{position:relative;height:70px;background:rgba(0,30,0, 0.8);width:1500px;display:block;overflow:auto}
 h1 {color:#FFFF00;margin:0px;padding:5px;font:bold 28px arial;}
 h2 {color:#00FF00;margin:0px;padding:5px;font:bold 14px arial;}
 h3 {background:#115599;color:#FFF;margin:0px;padding:5px;font:bold 14px arial;overflow:auto;}
@@ -31,7 +31,7 @@ h3.cFFFFCC {background:#FFFFCC;color:#000080;margin:0px;padding:5px;font:bold 14
 h3.cFFFFFF {background:#FFFFFF;color:#FF0000;margin:0px;padding:5px;font:bold 14px arial;overflow:auto;}
 h3.cFF0999 {background:#FF0999;color:#FFF;margin:0px;padding:5px;font:bold 14px arial;overflow:auto;}
 /* NAVBAR STYLE ----------------------------------------------- */
-#navbar{position:relative;background:rgba(0,0,30, 0.75);color:#FFF;width:1500px;height:30px;float:left;margin:0px;padding:0px;font:13px arial;}
+#navbar{position:relative;background:rgba(30,0,0, 0.75);color:#FFF;width:1500px;height:30px;float:left;margin:0px;padding:0px;font:13px arial;}
 /* LINKS STYLE ----------------------------------------------- */
 a:link {color:#33FFFF;text-decoration:none;}
 a:visited {color:#33FFFF;text-decoration:none;}
@@ -39,11 +39,11 @@ a:hover {color:#FFFF00;text-decoration:none;}
 a:active {color:#FFF;text-decoration:underline;} 
 /* CONTENT AND SIDEBARS STYLE ----------------------------------------------- */
 #site-width {width:1500px;}
-#content{background:rgba(0,30,0, 0.75);float:left;padding:0px;width:1000px;height:auto;font:13px arial;border-radius:8px;border-radius:8px;}
-#sidebar1 {width:238px;background:rgba(0,0,30, 0.75);float:left;position:relative;border:1px solid #00FF00;border-radius:8px;padding:5px;}
-#sidebar2 {width:238px;background:rgba(0,0,30, 0.75);float:left;position:relative;border:1px solid #00FF00;border-radius:8px;padding:5px;}
-#sidebar3 {width:238px;background:rgba(0,0,30, 0.75);float:left;position:relative;border:1px solid #00FF00;border-radius:8px;padding:5px;}
-#sidebar4 {width:238px;background:rgba(0,0,30, 0.75);float:left;position:relative;border:1px solid #00FF00;border-radius:8px;padding:5px;}
+#content{background:rgba(0,0,30, 0.8);float:left;padding:0px;width:1000px;height:auto;font:13px arial;border-radius:8px;border-radius:8px;}
+#sidebar1 {width:238px;background:rgba(0,30,0, 0.75);float:left;position:relative;border:1px solid #00FF00;border-radius:8px;padding:5px;}
+#sidebar2 {width:238px;background:rgba(0,30,0, 0.75);float:left;position:relative;border:1px solid #00FF00;border-radius:8px;padding:5px;}
+#sidebar3 {width:238px;background:rgba(0,30,0, 0.75);float:left;position:relative;border:1px solid #00FF00;border-radius:8px;padding:5px;}
+#sidebar4 {width:238px;background:rgba(0,30,0, 0.75);float:left;position:relative;border:1px solid #00FF00;border-radius:8px;padding:5px;}
 #post-box {float:left;margin:3px;padding:3px;width:186px;height:200px;background:rgba(0,30,0, 0.75);border:1px solid #00FF00;border-radius:8px;}
 #a500 {background:rgba(0,0,30, 0.75);float:left;width:488px;padding:5px;margin:0px;border:1px solid #00FF00;border-radius:8px;}
 #b500 {background:rgba(0,0,30, 0.75);float:left;width:488px;padding:5px;margin:0px;border:1px solid #00FF00;border-radius:8px;}
