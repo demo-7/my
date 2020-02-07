@@ -48,7 +48,7 @@ var year = (yy < 1000) ? yy + 1900 : yy;
 document.write(day + "/" + month + "/" + year);
  //--></script>
 </div>
-<div id="mytime" style="background:#FBBB22;border-radius: 6px;padding:5px;margin-left:10px;color:#000000;font: 20px Arial;display:inline;">
+<div id="clockDisplay" style="background:#FBBB22;border-radius: 6px;padding:5px;margin-left:10px;color:#000000;font: 20px Arial;display:inline;">
 <script>
 function renderTime() {
 var currentTime = new Date();
@@ -66,7 +66,7 @@ if (s < 10) {s = "0" + s;	}
 var myClock = document.getElementById('clockDisplay');
 myClock.textContent = h + ":" + m + ":" + s + " " + diem;
 myClock.innerText = h + ":" + m + ":" + s + " " + diem;}
-renderTime();
+renderTime()
 </script>
 </div>
 <h5>CLOUD STORAGE</h5>            
