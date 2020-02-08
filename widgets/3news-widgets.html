@@ -1,0 +1,31 @@
+<style>
+html, body {border: 0px;margin: 0px;padding: 0px;}
+h4 {background:#F11111;color:#FFF;margin:0px;padding:5px;font:bold 14px arial;overflow:auto;}
+#f500 {background:rgba(0,0,30, 0.75);float:left;width:488px;padding:5px;margin:0px;border:1px solid #00FF00;border-radius:8px;} 
+</style>
+
+<div id="f500">
+<h4>NEWS FROM CNN GREECE</h4>
+<div id='cnn-root' style='float:left;width:488px;height:750px;' class='t7'></div>
+<script>
+(function(){
+var es = document.createElement('script'); es.async = true;
+es.src = '//www.cnn.gr/services/js/news.js?vs=2';
+document.getElementById('cnn-root').appendChild(es);}());
+</script>
+</div>
+
+<div id="f500">
+<h4>NEWS FROM NEWSBOMB.GR</h4>
+<div id="nb-root" style="float:left;width:488px;height:750px;" class="t7"></div>
+<script>
+ (function(){var es = document.createElement("script"); es.async = true;
+ es.src = "https://cdn1.bbend.net/services/js/news.js?vs=8";
+ document.getElementById("nb-root").appendChild(es);}());
+</script>
+</div>
+
+<div id="f500">
+<h4>NEWS FROM AMNA.GR</h4>
+<iframe src="https://www.amna.gr/news-widget" style="height:750px;width:488px;frameborder:0;"></iframe>
+</div>
