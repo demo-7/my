@@ -1,12 +1,19 @@
 <style>
 html, body {border: 0px;margin: 0px;padding: 0px;}
 </style>
-<div id="cnn-root" style="width:388px;height:750px;" class="t7"></div><script>var es = document.createElement("script"); es.async = true;es.src = "//www.cnn.gr/services/js/news.js?vs=1";document.getElementById("cnn-root").appendChild(es);</script>
+<div id="cnn-root" style="float:left;width:390px;height:750px;" class="t7"></div>
+<script>
+(function(){ 
+var es = document.createElement("script"); 
+es.async = true;es.src = "//www.cnn.gr/services/js/news.js?vs=1";
+document.getElementById("cnn-root").appendChild(es);}());
+</script>
 <div id="nb-root" style="float:left;width:390px;height:750px;" class="t7"></div>
 <script>
- (function(){var es = document.createElement("script"); es.async = true;
- es.src = "https://cdn1.bbend.net/services/js/news.js?vs=8";
- document.getElementById("nb-root").appendChild(es);}());
+(function(){
+var es = document.createElement("script"); es.async = true;
+es.src = "https://cdn1.bbend.net/services/js/news.js?vs=8";
+document.getElementById("nb-root").appendChild(es);}());
 </script>
 <iframe src="https://www.amna.gr/news-widget" style="float:left;height:750px;width:395px;frameborder:0;"></iframe>
 <div style="float:left;line-height:11px;text-align:right;width:300px;">
