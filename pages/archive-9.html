@@ -12,16 +12,11 @@
         width: 1100px;
         border-top: #000 1px solid;
         border-bottom: #000 1px solid;
-    }
-    
+    }    
 </style>
-
 <div class="header">
-    <span style="font-size: 14pt;">
-        Επιλέξτε ετικέτα για εμφάνιση των αντιστοιχων αναρτήσεων.
-        <a href="https://thavmatropio-midea.blogspot.com/" style="font-size: 14pt; font-style: italic;"> Αρχική Σελίδα</a>
-        <br />
-    </span>
+    <span style="font-size: 14pt;">Επιλέξτε ετικέτα για εμφάνιση των αντιστοιχων αναρτήσεων.<a href="https://the-best-widgets.blogspot.com/" style="font-size: 14pt; font-style: italic;">HOME PAGE</a>
+    <br /></span>
 </div>
 <center>
     <div class="mainbody">
@@ -125,27 +120,14 @@
                 display: none;
             }
         </style>
-
         <div id="bp_toc" style="max-height: 400px; overflow: standard; overflow-x: auto;"></div>
         <script>
-            //<![CDATA[
-
-            // ---------------------------------------------------
-            // Author: Beautiful Beta
-            // Version: 2
-            // Date: 2007-04-12
-            // ---------------------------------------------------
-            // Modified by Mohammad Fazle Rabbi
-            // www.bloggerspice.com
-            // Date : 08-04-2015
             // global arrays
-
             var postTitle = new Array(); // array of posttitles
             var postUrl = new Array(); // array of posturls
             var postDate = new Array(); // array of post publish dates
             var postSum = new Array(); // array of post summaries
             var postLabels = new Array(); // array of post labels
-
             // global variables
             var sortBy = "datenewest"; // default value for sorting ToC
             var tocLoaded = false; // true if feed is read and ToC can be displayed
@@ -154,44 +136,36 @@
             var tocdiv = document.getElementById("bp_toc"); //the toc container
             var totalEntires = 0; //Entries grabbed till now
             var totalPosts = 0; //Total number of posts in the blog.
-
             // main callback function
-
- function elgr_date_Format(dat) {
-        // Convert the substring to a Date object
-        const dateOfObject = new Date(dat);
-        // Define the formatting options
-        var date_options = { year: "numeric", month: "short", day: "numeric" };
-        // Format the date
-        var dateOf = dateOfObject.toLocaleDateString("el-GR", date_options);
-        return dateOf;
+            function elgr_date_Format(dat) {
+            // Convert the substring to a Date object
+            const dateOfObject = new Date(dat);
+            // Define the formatting options
+            var date_options = { year: "numeric", month: "short", day: "numeric" };
+            // Format the date
+            var dateOf = dateOfObject.toLocaleDateString("el-GR", date_options);
+            return dateOf;
     }
-
-    function dateFormat(input_D, format_D) {
+        function dateFormat(input_D, format_D) {
         // input date parsed
         const date = new Date(input_D);
-
         //extracting parts of date string
         const day = date.getDate();
         const month = date.getMonth() + 1;
         const year = date.getFullYear();
-
         //to replace month
         format_D = format_D.replace("MM", month.toString().padStart(2, "0"));
-
         //to replace year
         if (format_D.indexOf("yyyy") > -1) {
             format_D = format_D.replace("yyyy", year.toString());
         } else if (format_D.indexOf("yy") > -1) {
             format_D = format_D.replace("yy", year.toString().substr(2, 2));
         }
-
         //to replace day
         format_D = format_D.replace("dd", day.toString().padStart(2, "0"));
 
         return format_D;
     }
-
             function loadtoc(json) {
                 function getPostData() {
                     // this functions reads all postdata from the json-feed and stores it in arrays
@@ -210,13 +184,10 @@
                         for (var i = 0; i < numEntries; i++) {
                             // get the entry from the feed
                             var entry = json.feed.entry[i];
-
                             // get the posttitle from the entry
                             var posttitle = entry.title.$t;
-
                             // get the post date from the entry
                             var postdate = entry.published.$t.substring(0, 10);
-
                             // get the post url from the entry
                             var posturl;
                             for (var k = 0; k < entry.link.length; k++) {
@@ -225,7 +196,6 @@
                                     break;
                                 }
                             }
-
                             // get the post contents from the entry
                             // strip all html-characters, and reduce it to a summary
                             if ("content" in entry) {
@@ -242,7 +212,6 @@
                                 var quoteEnd = postcontent.lastIndexOf(" ");
                                 postcontent = postcontent.substring(0, quoteEnd) + "...";
                             }
-
                             // get the post labels from the entry
                             var pll = "";
                             if ("category" in entry) {
@@ -254,7 +223,6 @@
                                     pll = pll.substring(0, l);
                                 }
                             }
-
                             // add the post data to the arrays
                             postTitle.push(posttitle);
                             postDate.push(postdate);
@@ -268,21 +236,16 @@
                         showToc();
                     }
                 } // end of getPostData
-
                 // start of showtoc function body
                 // get the number of entries that are in the feed
                 numEntries = json.feed.entry.length;
-
                 // get the postdata from the feed
                 getPostData();
-
                 // sort the arrays
                 sortPosts(sortBy);
                 tocLoaded = true;
             }
-
             // filter and sort functions
-
             function filterPosts(filter) {
                 // This function changes the filter
                 // and displays the filtered list of posts
@@ -290,7 +253,6 @@
                 postFilter = filter;
                 displayToc(postFilter);
             } // end filterPosts
-
             function allPosts() {
                 // This function resets the filter
                 // and displays all posts
@@ -298,11 +260,9 @@
                 postFilter = "";
                 displayToc(postFilter);
             } // end allPosts
-
             function sortPosts(sortBy) {
                 // This function is a simple bubble-sort routine
                 // that sorts the posts
-
                 function swapPosts(x, y) {
                     // Swaps 2 ToC-entries by swapping all array-elements
                     var temp = postTitle[x];
@@ -321,7 +281,6 @@
                     postLabels[x] = postLabels[y];
                     postLabels[y] = temp;
                 } // end swapPosts
-
                 for (var i = 0; i < postTitle.length - 1; i++) {
                     for (var j = i + 1; j < postTitle.length; j++) {
                         if (sortBy == "titleasc") {
@@ -347,9 +306,7 @@
                     }
                 }
             } // end sortPosts
-
             // displaying the toc
-
             function displayToc(filter) {
                 // this function creates a three-column table and adds it to the screen
                 var numDisplayed = 0;
@@ -434,7 +391,6 @@
                 }
                 tocdiv.innerHTML = tocNote + tocTable;
             } // end of displayToc
-
             function toggleTitleSort() {
                 if (sortBy == "titleasc") {
                     sortBy = "titledesc";
@@ -444,7 +400,6 @@
                 sortPosts(sortBy);
                 displayToc(postFilter);
             } // end toggleTitleSort
-
             function toggleDateSort() {
                 if (sortBy == "datenewest") {
                     sortBy = "dateoldest";
@@ -454,7 +409,6 @@
                 sortPosts(sortBy);
                 displayToc(postFilter);
             } // end toggleTitleSort
-
             function showToc() {
                 if (tocLoaded) {
                     displayToc(postFilter);
@@ -463,7 +417,6 @@
                     alert("Περιμένετε... Ο Πίνακας Διαβάζεται");
                 }
             }
-
             function hideToc() {
                 var tocdiv = document.getElementById("toc");
                 tocdiv.innerHTML = "";
@@ -472,12 +425,8 @@
             }
             //]]>
         </script>
-
-        <script src="https://thavmatropio-midea.blogspot.com/feeds/posts/summary?alt=json-in-script&amp;start-index=0001&amp;max-results=500&amp;callback=loadtoc" type="text/javascript"></script>
-       
-
-
+        <script src="https://the-best-widgets.blogspot.com/feeds/posts/summary?alt=json-in-script&amp;start-index=0001&amp;max-results=500&amp;callback=loadtoc" type="text/javascript"></script>
         <script type="text/javascript">
-            showToc();
+        showToc();
         </script>
-    </div>
+        </div>
