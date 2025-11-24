@@ -1,145 +1,42 @@
-<div class='widget HTML' data-version='1' id='HTML9'>
-<h2 class='title'>Main Tab</h2>
-<div class='widget-content'>
-<style scoped="" type="text/css">
-    .header {
-        height: 40px;
-        width: 1100px;
-        text-align: center;
-    }
-    .mainbody {
-        min-height: 250px;
-        width: 1100px;
-        border-top: #000 1px solid;
-        border-bottom: #000 1px solid;
-    }
-    
+<left>
+<div class="mainbody">  
+<style scoped="" type="text/css">  
+.mainbody {background:#105105;min-height:500px;width:1480px;}  
+#bp_toc {background:#333;color:#fff;margin:5px;padding:5px;}
+span.toc-note {padding:5px;margin:5px;position:relative;display:block;text-align:left;background-color:#740777;
+color:#fff;font-family:"Arial";font-weight:700;'text-transform:uppercase;font-size:16px;line-height:normal;}
+.toc-header-col1 {padding:5px;position:relative;background-color:#003366;width:480px;}
+.toc-header-col2 {padding:5px;position:relative;background-color:#663333;width:120px;}
+.toc-header-col3 {padding:5px;position:relative;background-color:#333;width:880px;}
+.toc-header-col1 a:link {font-size: 16px;text-decoration:none;color:#33ffff;font-family:"Arial";}
+.toc-header-col1 a:visited {font-size: 16px;text-decoration:none;color:#115599;font-family:"Arial";} 
+.toc-header-col2 a:link {font-size: 16px;text-decoration:none;color:#33ffff;font-family:"Arial";} 
+.toc-header-col2 a:visited {font-size: 16px;text-decoration:none;color:#115599;font-family:"Arial";} 
+.toc-header-col3 a:link {font-size: 16px;text-decoration:none;color:#33ffff;font-family:"Arial";} 
+.toc-header-col3 a:visited {font-size: 16px;text-decoration:none;color:#115599;font-family:"Arial";} 
+.toc-header-col1 a:hover {text-decoration:none;}
+.toc-header-col2 a:hover {text-decoration:none;} 
+.toc-header-col3 a:hover {text-decoration:none;}
+.toc-entry-col1 {background:#003366;padding:5px;font-size:16px;}
+.toc-entry-col2 {background:#663333;padding:5px;font-size:16px;} 
+.toc-entry-col3 {background:#333333;padding:5px;font-size:16px;}
+.toc-entry-col1 a {color: #fff;font-size:16px;} 
+.toc-entry-col2 a {color: #fff;font-size:16px;}
+.toc-entry-col3 a {color: #fff;font-size:16px;}
+.toc-entry-col1 a:hover {color:#ffff00;} 
+.toc-entry-col2 a:hover {color:#ffff00;} 
+.toc-entry-col3 a:hover {color:#ffff00;}
+#bp_toc table {width: 100%;margin:1px;counter-reset:rowNumber;}
+.toc-entry-col1 {counter-increment: rowNumber;}
+#bp_toc table tr td.toc-entry-col1:first-child::before {content: counter(rowNumber);min-width: 1em;margin-right:5px;}
+td.toc-entry-col2 {background:#663333;}
+#comments {display: none;}
 </style>
-
-<div class="header">
-    <span style="font-size: 14pt;">
-        Επιλέξτε ετικέτα για εμφάνιση των αντιστοιχων αναρτήσεων.
-        <a href="https://thavmatropio-midea.blogspot.com/" style="font-size: 14pt; font-style: italic;"> Αρχική Σελίδα</a>
-        <br />
-    </span>
-</div>
-<center>
-    <div class="mainbody">
-        <style scoped="" type="text/css">
-            #bp_toc {
-                background: lightgrey;
-                color: grey;
-                margin: 0 auto;
-                padding: 5px;
-            }
-            span.toc-note {
-                padding: 20px;
-                margin: 0 auto;
-                position: sticky;
-                top: -20px;
-                display: block;
-                text-align: center;
-                background-color: #f5f5f5;
-                color: black;
-                font-family: "Trebuchet MS";
-                font-weight: 700;
-                'text-transform: uppercase;
-                font-size: 17px;
-                line-height: normal;
-            }
-            .toc-header-col1 {
-                padding: 10px;
-                position: sticky;
-                top: 30px;
-                background-color: #f5f5f5;
-                width: 250px;
-            }
-            .toc-header-col2 {
-                padding: 10px;
-                position: sticky;
-                top: 30px;
-                background-color: #f5f5f5;
-                width: 75px;
-            }
-            .toc-header-col3 {
-                padding: 10px;
-                position: sticky;
-                top: 30px;
-                background-color: #f5f5f5;
-                width: 125px;
-            }
-            .toc-header-col1 a:link,
-            .toc-header-col1 a:visited,
-            .toc-header-col2 a:link,
-            .toc-header-col2 a:visited,
-            .toc-header-col3 a:link,
-            .toc-header-col3 a:visited {
-                font-size: 17px;
-                text-decoration: none;
-                color: black;
-                font-family: "Trebuchet MS";
-                font-weight: 700;
-                letter-spacing: 0.5px;
-            }
-            .toc-header-col1 a:hover,
-            .toc-header-col2 a:hover,
-            .toc-header-col3 a:hover {
-                text-decoration: none;
-            }
-            .toc-entry-col1,
-            .toc-entry-col2,
-            .toc-entry-col3 {
-                background: lightgrey;
-                padding: 5px;
-                padding-left: 5px;
-                font-size: 95%;
-            }
-            .toc-entry-col1 a,
-            .toc-entry-col2 a,
-            .toc-entry-col3 a {
-                color: #666;
-                font-size: 18px;
-            }
-            .toc-entry-col1 a:hover,
-            .toc-entry-col2 a:hover,
-            .toc-entry-col3 a:hover {
-                color: #e76e66;
-            }
-            #bp_toc table {
-                width: 100%;
-                margin: 0 auto;
-                counter-reset: rowNumber;
-            }
-            .toc-entry-col1 {
-                counter-increment: rowNumber;
-            }
-            #bp_toc table tr td.toc-entry-col1:first-child::before {
-                content: counter(rowNumber);
-                min-width: 1em;
-                margin-right: 0.5em;
-            }
-            td.toc-entry-col2 {
-                background: #fafafa;
-            }
-            #comments {
-                display: none;
-            }
-        </style>
-
-        <div id="bp_toc" style="max-height: 400px; overflow: standard; overflow-x: auto;"></div>
+<div id="bp_toc" style="max-height:100%; overflow: standard; overflow-x: auto;"></div>
         <script>
             //<![CDATA[
 
-            // ---------------------------------------------------
-            // Author: Beautiful Beta
-            // Version: 2
-            // Date: 2007-04-12
-            // ---------------------------------------------------
-            // Modified by Mohammad Fazle Rabbi
-            // www.bloggerspice.com
-            // Date : 08-04-2015
             // global arrays
-
             var postTitle = new Array(); // array of posttitles
             var postUrl = new Array(); // array of posturls
             var postDate = new Array(); // array of post publish dates
@@ -156,7 +53,6 @@
             var totalPosts = 0; //Total number of posts in the blog.
 
             // main callback function
-
  function elgr_date_Format(dat) {
         // Convert the substring to a Date object
         const dateOfObject = new Date(dat);
@@ -164,8 +60,7 @@
         var date_options = { year: "numeric", month: "short", day: "numeric" };
         // Format the date
         var dateOf = dateOfObject.toLocaleDateString("el-GR", date_options);
-        return dateOf;
-    }
+        return dateOf;}
 
     function dateFormat(input_D, format_D) {
         // input date parsed
@@ -354,11 +249,11 @@
                 // this function creates a three-column table and adds it to the screen
                 var numDisplayed = 0;
                 var tocTable = "";
-                var tocHead1 = "Τίτλος Ανάρτησης";
-                var tocTool1 = "Click για Ταξινόμηση ανά Τίτλο";
-                var tocHead2 = "Ημ/νία Ανάρτησης";
-                var tocTool2 = "Click για Ταξινόμηση ανά Ημ/νία Ανάρτησης";
-                var tocHead3 = "Ετικέτες";
+                var tocHead1 = "POST TITLE";
+                var tocTool1 = "Click για ταξινόμηση ανά τίτλο";
+                var tocHead2 = "DATE OF POST";
+                var tocTool2 = "Click για ταξινόμηση ανά ημερομηνία ανάρτησης";
+                var tocHead3 = "LABELS";
                 var tocTool3 = "";
                 if (sortBy == "titleasc") {
                     tocTool1 += " (descending)";
@@ -377,7 +272,7 @@
                     tocTool2 += " (oldest first)";
                 }
                 if (postFilter != "") {
-                    tocTool3 = "Click για Εμφάνιση όλων των Ετικετών";
+                    tocTool3 = "Click για εμφάνιση όλων των ετικετών";
                 }
                 tocTable += "<table>";
                 tocTable += "<tr>";
@@ -427,10 +322,10 @@
                 }
                 tocTable += "</table>";
                 if (numDisplayed == postTitle.length) {
-                    var tocNote = '<span class="toc-note">Εμφάνιση Όλων των ' + postTitle.length + " Αναρτήσεων<br/></span>";
+                    var tocNote = '<span class="toc-note">Βρέθηκαν ' + postTitle.length + " αναρτήσεις<br/></span>";
                 } else {
-                    var tocNote = '<span class="toc-note">Εμφάνιση ' + numDisplayed + " Αναρτήσεων με Ετικέτα '";
-                    tocNote += postFilter + "' από " + postTitle.length + " Αναρτήσεις Σύνολικά<br/></span>";
+                    var tocNote = '<span class="toc-note">Βρέθηκαν ' + numDisplayed + " αναρτήσεις με ετικέτα '";
+                    tocNote += postFilter + "' από " + postTitle.length + " αναρτήσεις σύνολικά<br/></span>";
                 }
                 tocdiv.innerHTML = tocNote + tocTable;
             } // end of displayToc
@@ -463,21 +358,16 @@
                     alert("Περιμένετε... Ο Πίνακας Διαβάζεται");
                 }
             }
-
             function hideToc() {
                 var tocdiv = document.getElementById("toc");
                 tocdiv.innerHTML = "";
                 var toclink = document.getElementById("toclink");
-                toclink.innerHTML = '<a href="#" onclick="scroll(0,0); showToc(); Effect.toggle(' + "'toc-result','blind');" + '">&#65533; Show Table of Contents</a> <img src="http://chenkaie.blog.googlepages.com/new_1.gif"/>';
+                toclink.innerHTML = '<a href="#" onclick="scroll(0,0); showToc(); Effect.toggle(' + "'toc-result','blind');" + '">&#65533; Show Table of Contents</a> <img src="https://i.imgur.com/yn1S2OM.jpg"/>';
             }
             //]]>
         </script>
-
-        <script src="https://thavmatropio-midea.blogspot.com/feeds/posts/summary?alt=json-in-script&amp;start-index=0001&amp;max-results=500&amp;callback=loadtoc" type="text/javascript"></script>
-       
-
-
-        <script type="text/javascript">
-            showToc();
-        </script>
-    </div>
+        <script src="https://the-best-widgets.blogspot.com/feeds/posts/summary?alt=json-in-script&amp;start-index=0001&amp;max-results=500&amp;callback=loadtoc" type="text/javascript"></script>
+<script type="text/javascript">
+showToc();
+</script>
+</div>  
